@@ -30,7 +30,7 @@ export function LoadingScreen() {
           transition={{ duration: 0.5 }}
           className="relative"
         >
-          <img src={logoImage} alt="RR Design" className="h-32 md:h-40 w-auto" />
+          <img src={logoImage} alt="Ruan Ramos Digital" className="h-32 md:h-40 w-auto" />
 
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-green-500 blur-3xl opacity-30"
