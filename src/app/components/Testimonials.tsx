@@ -7,6 +7,18 @@ export function Testimonials() {
 
   const testimonials = [
     {
+      name: "Ricardo",
+      role: "Rick Automóveis",
+      content: "Antes, vendíamos cerca de 2 carros por mês. No primeiro mês de trabalho com o Ruan, chegamos a 10 vendas. Um crescimento expressivo logo no início da parceria.",
+      rating: 5,
+    },
+    {
+      name: "Anderson",
+      role: "Proprietário - GOO Elétricos",
+      content: "O Ruan é um profissional sensacional e muito competente. Ele trouxe a inovação que a GOO precisava e entregou resultados acima das nossas expectativas.",
+      rating: 5,
+    },
+    {
       name: "Renata da Genesis Mobilidade",
       role: "Vendas de Motos e Mobilidade",
       content: "Triplicamos as vendas em apenas 3 semanas! A landing page com automação de atendimento foi um divisor de águas. Vendemos 12 motos quando a meta era 4. Resultado surpreendente! E o Ruan é sensacional, super atencioso e profissional. Recomendo demais! ",
