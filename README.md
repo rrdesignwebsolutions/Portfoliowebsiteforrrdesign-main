@@ -8,4 +8,8 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
+
+  ## Deploying to GitHub Pages
+
+  The workflow in `.github/workflows/deploy.yml` builds the Vite app and deploys `dist` when changes are pushed to `main`. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**.
   
