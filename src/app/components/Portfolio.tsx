@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { ExternalLink, Eye } from "lucide-react";
+import { ExternalLink, Eye, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import avFlowCrmLogo from "../../imports/av_flow_crm_logo.png";
+import avFlowCrmDashboard from "../../imports/av_flow_crm_dashboard.png";
 import fotoGenesis from "../../imports/foto_genesis.jpeg";
 import fotoDuaal from "../../imports/foto_duaal.png";
 import fotoEliana from "../../imports/foto_eliana.png";
@@ -16,6 +16,7 @@ interface Project {
   description: string;
   result: string;
   link: string;
+  instagramLink?: string;
   image: string;
   featured?: boolean;
 }
@@ -31,7 +32,7 @@ export function Portfolio() {
       description: "CRM próprio para centralizar a gestão de leads, automatizar o atendimento com IA e acompanhar cada oportunidade em um só lugar.",
       result: "Plataforma própria de CRM, atendimento automatizado por IA e gestão completa dos leads ao longo da jornada comercial.",
       link: "https://avflowcrm.com.br/",
-      image: avFlowCrmLogo,
+      image: avFlowCrmDashboard,
       featured: true,
     },
     {
@@ -40,7 +41,8 @@ export function Portfolio() {
       type: "Social Media + Videomaker + Gestão de tráfego",
       description: "Gestão de Social Media, produção de vídeos e tráfego pago para fortalecer a presença digital da Rick Automóveis e divulgar seus veículos.",
       result: "De cerca de 2 para 10 carros vendidos já no primeiro mês de trabalho.",
-      link: "https://www.instagram.com/rick.automoveis/",
+      link: "https://rickautomoveis.com.br/",
+      instagramLink: "https://www.instagram.com/rick.automoveis/",
       image: fotoRick,
     },
     {
@@ -49,7 +51,8 @@ export function Portfolio() {
       type: "Social Media + Videomaker + Gestão de tráfego",
       description: "Gestão de Social Media, produção de vídeos e tráfego pago para divulgar as scooters elétricas da GOO em Itajubá e Pouso Alegre.",
       result: "Em três meses de trabalho, a GOO passou a vender entre 20 e 25 motos por mês, em média, e expandiu a loja para Pouso Alegre.",
-      link: "https://www.instagram.com/gooeletricos_itajuba/",
+      link: "https://gooeletricositajuba.com.br/",
+      instagramLink: "https://www.instagram.com/gooeletricos_itajuba/",
       image: fotoGoo,
     },
     {
@@ -59,6 +62,7 @@ export function Portfolio() {
       description: "Estratégia integrada de conteúdo e marketing digital para impulsionar as vendas de motos e apoiar a expansão da Gênesis.",
       result: "De 5 para 38 motos vendidas por mês em seis meses, crescimento de 660%, com expansão para uma nova unidade em outra cidade.",
       link: "https://genesismobilidade.shop/",
+      instagramLink: "https://www.instagram.com/genesis.mobilidade/",
       image: fotoGenesis,
     },
     {
@@ -208,19 +212,31 @@ export function Portfolio() {
                 <p className="text-white mt-1">{selectedProject.result}</p>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={selectedProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
                 >
                   Acessar projeto
                   <ExternalLink className="w-4 h-4" />
                 </a>
+                {selectedProject.instagramLink && (
+                  <a
+                    href={selectedProject.instagramLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 text-white rounded-xl hover:bg-slate-700 transition-colors"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    Ver Instagram
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="px-6 py-3 bg-slate-800 text-white rounded-xl hover:bg-slate-700 transition-colors"
+                  className="w-full sm:w-auto px-6 py-3 bg-slate-800 text-white rounded-xl hover:bg-slate-700 transition-colors"
                 >
                   Fechar
                 </button>
