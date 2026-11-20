@@ -29,9 +29,9 @@ export function About() {
             </span>
           </h2>
           <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-            Somos especialistas em criar experiências digitais que não apenas impressionam visualmente,
+            Sou especialista em criar experiências digitais que não apenas impressionam visualmente,
             mas que geram conversões reais através de automação inteligente e estratégias comprovadas.
-            Não criamos apenas sites — criamos máquinas de vendas.
+            Não crio apenas sites — crio máquinas de vendas.
           </p>
         </motion.div>
 
