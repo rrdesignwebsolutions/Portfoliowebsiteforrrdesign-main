@@ -9,13 +9,13 @@ export function Testimonials() {
     {
       name: "Ricardo",
       role: "Rick Automóveis",
-      content: "Antes, vendíamos cerca de 2 carros por mês. No primeiro mês de trabalho com o Ruan, chegamos a 10 vendas. Um crescimento expressivo logo no início da parceria.",
+      content: "Antes, vendíamos cerca de 2 carros por mês. Com o trabalho de Social Media, vídeos e gestão de tráfego do Ruan, já no primeiro mês chegamos a 10 vendas. Um resultado expressivo logo no início da parceria.",
       rating: 5,
     },
     {
       name: "Anderson",
       role: "Proprietário - GOO Elétricos",
-      content: "O Ruan é um profissional sensacional e muito competente. Ele trouxe a inovação que a GOO precisava e entregou resultados acima das nossas expectativas.",
+      content: "O Ruan é um profissional sensacional e muito competente. Ele trouxe a inovação que a GOO precisava. Em apenas três meses de trabalho, passamos a vender entre 20 e 25 motos por mês, em média, e expandimos a loja para Pouso Alegre. Os resultados superaram nossas expectativas.",
       rating: 5,
     },
     {
