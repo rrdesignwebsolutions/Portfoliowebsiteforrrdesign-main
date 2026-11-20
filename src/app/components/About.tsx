@@ -5,7 +5,7 @@ export function About() {
   const expertise = [
     { icon: Code, title: "Desenvolvimento Web", color: "from-blue-500 to-cyan-500" },
     { icon: Video, title: "Vídeomaker", color: "from-cyan-500 to-green-500" },
-    { icon: Bot, title: "Automação de Atendimento", color: "from-violet-500 to-cyan-500" },
+    { icon: Bot, title: "AV Flow CRM", color: "from-violet-500 to-cyan-500" },
     { icon: TrendingUp, title: "Estratégia de Conversão", color: "from-green-500 to-emerald-500" },
   ];
 

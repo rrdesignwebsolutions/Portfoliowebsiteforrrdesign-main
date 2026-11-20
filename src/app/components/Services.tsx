@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code2, Rocket, Share2, TrendingUp, Bot } from "lucide-react";
+import { Code2, Rocket, Share2, TrendingUp, Bot, Video } from "lucide-react";
 
 export function Services() {
   const services = [
@@ -19,9 +19,9 @@ export function Services() {
     },
     {
       icon: Bot,
-      title: "Automação de Atendimento",
-      description: "Sistemas automatizados de atendimento que qualificam leads e respondem instantaneamente via WhatsApp.",
-      benefits: ["Assistentes virtuais", "Respostas automáticas", "Qualificação de leads"],
+      title: "AV Flow CRM",
+      description: "CRM próprio que centraliza a gestão dos leads e automatiza o atendimento com inteligência artificial, ajudando sua equipe a acompanhar cada oportunidade.",
+      benefits: ["Gestão completa de leads", "Atendimento automatizado por IA", "Acompanhamento das oportunidades"],
       color: "from-violet-500 to-cyan-500",
     },
     {
@@ -30,6 +30,13 @@ export function Services() {
       description: "Gestão completa das suas redes sociais com conteúdo estratégico e engajamento autêntico.",
       benefits: ["Calendário editorial", "Design de posts", "Análise de métricas"],
       color: "from-orange-500 to-red-500",
+    },
+    {
+      icon: Video,
+      title: "Vídeomaker",
+      description: "Produção de vídeos estratégicos para apresentar marcas, produtos e serviços em conteúdos que prendem a atenção.",
+      benefits: ["Roteiro e planejamento", "Captação e edição", "Conteúdo para redes sociais"],
+      color: "from-pink-500 to-orange-500",
     },
     {
       icon: TrendingUp,

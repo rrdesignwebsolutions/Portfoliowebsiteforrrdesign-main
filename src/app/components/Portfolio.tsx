@@ -2,13 +2,12 @@ import { motion } from "motion/react";
 import { ExternalLink, Eye } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import avFlowCrmPreview from "../../imports/av_flow_crm_preview.svg";
 import fotoGenesis from "../../imports/foto_genesis.jpeg";
-import fotoSonhoDePatas from "../../imports/foto_sonhodepatas.png.png";
 import fotoDuaal from "../../imports/foto_duaal.png";
 import fotoEliana from "../../imports/foto_eliana.png";
-import fotoClaudia from "../../imports/foto_claudia.png";
-import fotoPetGuardian from "../../imports/foto_petguardian.png";
-
+import fotoGoo from "../../imports/foto_goo_eletricos.png";
+import fotoRick from "../../imports/foto_rick_automoveis.png";
 
 interface Project {
   id: number;
@@ -18,6 +17,7 @@ interface Project {
   result: string;
   link: string;
   image: string;
+  featured?: boolean;
 }
 
 export function Portfolio() {
@@ -26,62 +26,58 @@ export function Portfolio() {
   const projects: Project[] = [
     {
       id: 1,
-      name: "Concessionária de Motos",
-      type: "Landing Page + Automação de Atendimento + Social Media",
-      description: "Vendas triplicadas em 1 mês",
-      result: "16 motos vendidas em 1 mês - 300% acima da meta de 4 motos",
+      name: "AV Flow CRM",
+      type: "CRM + Atendimento automatizado por IA",
+      description: "CRM próprio para centralizar a gestão de leads, automatizar o atendimento com IA e acompanhar cada oportunidade em um só lugar.",
+      result: "Plataforma própria de CRM, atendimento automatizado por IA e gestão completa dos leads ao longo da jornada comercial.",
+      link: "https://avflowcrm.com.br/",
+      image: avFlowCrmPreview,
+      featured: true,
+    },
+    {
+      id: 2,
+      name: "Rick Automóveis",
+      type: "Site para concessionária",
+      description: "Presença digital para apresentar a loja e os veículos da Rick Automóveis a clientes interessados.",
+      result: "Um canal online para divulgar o estoque e facilitar o contato com a equipe comercial.",
+      link: "https://rickautomoveis.com.br/",
+      image: fotoRick,
+    },
+    {
+      id: 3,
+      name: "GOO Elétricos",
+      type: "Mobilidade elétrica",
+      description: "Site para apresentar as scooters elétricas da GOO e orientar clientes sobre modelos e lojas em Itajubá e Pouso Alegre.",
+      result: "Modelos, unidades locais e informações para simular a compra reunidos em um canal digital.",
+      link: "https://gooeletricositajuba.com.br/",
+      image: fotoGoo,
+    },
+    {
+      id: 4,
+      name: "Gênesis Mobilidade",
+      type: "Social Media + Videomaker + Copywriting + Tráfego pago",
+      description: "Estratégia integrada de conteúdo e marketing digital para impulsionar as vendas de motos e apoiar a expansão da Gênesis.",
+      result: "De 5 para 38 motos vendidas por mês em seis meses, crescimento de 660%, com expansão para uma nova unidade em outra cidade.",
       link: "https://genesismobilidade.shop/",
       image: fotoGenesis,
     },
-    
-    
     {
-      id: 2,
-      name: "Profissional",
+      id: 5,
+      name: "Dra. Eliana Cintra",
       type: "Identidade Visual + Landing Page",
-      description: "Identidade visual e landing para médica pediatra com foco em captação de pacientes",
+      description: "Identidade visual e landing page para médica pediatra, com comunicação acolhedora e foco em captação de pacientes.",
       result: "Projeto pronto e entregue, aguardando lançamento para medir resultados",
       link: "https://draelianacintra.com.br",
       image: fotoEliana,
     },
-
     {
-      id: 3,
+      id: 6,
       name: "Startup de Bebidas",
       type: "Identidade Visual + Design de Embalagens",
       description: "Desenvolvimento completo de marca para lançamento.",
       result: "Marca estruturada e embalagens prontas para produção.",
       link: "https://www.duaal.com.br/",
       image: fotoDuaal,
-    },
-    
-    {
-      id: 4,
-      name: "E-commerce",
-      type: "Loja Virtual de Alta Conversão",
-      description: "E-commerce otimizado para vendas. Foco em experiência do usuário",
-      result: "Taxa de conversão de 4,2% - acima da média do mercado",
-      link: "https://www.sonhodepatas.com.br/",
-      image: fotoSonhoDePatas,
-    },
-    
-    {
-      id: 5,
-      name: "Profissional",
-      type: "Identidade Visual",
-      description: "Identidade visual completa pra empreendedora.",
-      result: "Marca estruturada e pronta para aplicação em diversos materiais",
-      link: "https://claudiavilela.com.br",
-      image: fotoClaudia,
-    },
-    {
-      id: 6,
-      name: "Pet Guardian",
-      type: "Landing Page + Estratégia de Marketing Digital",
-      description: "Foco em captação de leads",
-      result: "Projeto pronto e entregue",
-      link: "https://ruanprogramadorweb.github.io/PetGuardian-Site/",
-      image: fotoPetGuardian,
     },
   ];
 
@@ -108,7 +104,7 @@ export function Portfolio() {
             </span>
           </h2>
           <p className="text-xl text-cyan-200 max-w-2xl mx-auto">
-            Confira alguns dos projetos reais desenvolvidos para nossos clientes
+            Confira projetos de clientes e conheça também nosso produto próprio
           </p>
         </motion.div>
 
@@ -123,7 +119,11 @@ export function Portfolio() {
               className="group relative cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="relative overflow-hidden rounded-2xl bg-slate-900 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
+              <div className={`relative overflow-hidden rounded-2xl bg-slate-900 border transition-all duration-300 ${
+                project.featured
+                  ? "border-green-500/50 shadow-lg shadow-green-500/10 hover:border-green-400"
+                  : "border-cyan-500/20 hover:border-cyan-500/40"
+              }`}>
                 <div className="aspect-video relative overflow-hidden">
                   <ImageWithFallback
                     src={project.image}
@@ -131,6 +131,12 @@ export function Portfolio() {
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+
+                  {project.featured && (
+                    <span className="absolute top-4 left-4 z-10 rounded-full border border-green-300/30 bg-slate-950/85 px-3 py-1 text-xs font-medium text-green-200">
+                      Projeto próprio
+                    </span>
+                  )}
 
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-cyan-600 p-4 rounded-full">
@@ -140,14 +146,18 @@ export function Portfolio() {
                 </div>
 
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full mb-3">
+                  <span className={`inline-block px-3 py-1 text-xs rounded-full mb-3 ${
+                    project.featured ? "bg-green-500/20 text-green-300" : "bg-cyan-500/20 text-cyan-300"
+                  }`}>
                     {project.type}
                   </span>
                   <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>
                   <p className="text-cyan-200 text-sm mb-4 line-clamp-2">{project.description}</p>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-cyan-400">Projeto real desenvolvido</span>
+                    <span className="text-xs text-cyan-400">
+                      {project.featured ? "Produto próprio" : "Projeto real desenvolvido"}
+                    </span>
                     <ExternalLink className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                   </div>
                 </div>
@@ -199,7 +209,7 @@ export function Portfolio() {
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
                 >
-                  Ver site ao vivo
+                  Acessar projeto
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 <button

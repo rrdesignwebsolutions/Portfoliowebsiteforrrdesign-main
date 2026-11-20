@@ -18,8 +18,9 @@ export function Footer() {
             <ul className="space-y-2 text-cyan-200 text-sm">
               <li>Desenvolvimento Web</li>
               <li>Landing Pages</li>
-              <li>Automação de Atendimento</li>
+              <li>AV Flow CRM</li>
               <li>Social Media</li>
+              <li>Vídeomaker</li>
               <li>Gestão de Tráfego</li>
             </ul>
           </div>
