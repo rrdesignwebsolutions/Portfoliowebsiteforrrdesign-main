@@ -25,9 +25,9 @@ export function CTA() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Pronto para ter um site que{" "}
+                Pronto para {" "}
                 <span className="bg-gradient-to-r from-cyan-300 to-green-300 bg-clip-text text-transparent">
-                  realmente gera resultados?
+                  realmente gerar resultados?
                 </span>
               </h2>
 

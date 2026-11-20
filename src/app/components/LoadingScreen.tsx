@@ -31,19 +31,6 @@ export function LoadingScreen() {
           className="relative"
         >
           <img src={logoImage} alt="Ruan Ramos Digital" className="h-32 md:h-40 w-auto" />
-
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-green-500 blur-3xl opacity-30"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
         </motion.div>
 
         <motion.div

@@ -26,7 +26,7 @@ export function Portfolio() {
   const projects: Project[] = [
     {
       id: 1,
-      name: "Genesis Mobilidade",
+      name: "Concessionária de Motos",
       type: "Landing Page + Automação de Atendimento + Social Media",
       description: "Vendas triplicadas em 1 mês",
       result: "16 motos vendidas em 1 mês - 300% acima da meta de 4 motos",
@@ -37,9 +37,9 @@ export function Portfolio() {
     
     {
       id: 2,
-      name: "Médica Pediatra",
+      name: "Profissional",
       type: "Identidade Visual + Landing Page",
-      description: "Identidade visual e landing para pediatra com foco em captação de pacientes",
+      description: "Identidade visual e landing para médica pediatra com foco em captação de pacientes",
       result: "Projeto pronto e entregue, aguardando lançamento para medir resultados",
       link: "https://draelianacintra.com.br",
       image: fotoEliana,
@@ -67,9 +67,9 @@ export function Portfolio() {
     
     {
       id: 5,
-      name: "Cláudia Vilela",
+      name: "Profissional",
       type: "Identidade Visual",
-      description: "Desenvolvimento de identidade visual completa",
+      description: "Identidade visual completa pra empreendedora.",
       result: "Marca estruturada e pronta para aplicação em diversos materiais",
       link: "https://claudiavilela.com.br",
       image: fotoClaudia,
