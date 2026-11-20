@@ -104,7 +104,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-cyan-200 mb-12 max-w-3xl mx-auto"
           >
-            Web Design, Social Media, Vídeomaker, Gestão de Tráfego e Automação de Atendimento, trabalhando juntos para crescer seu negócio online.
+            Uno Web Design, Social Media, Vídeomaker, Gestão de Tráfego e Automação de Atendimento para fazer seu negócio crescer online.
           </motion.p>
 
           <motion.div

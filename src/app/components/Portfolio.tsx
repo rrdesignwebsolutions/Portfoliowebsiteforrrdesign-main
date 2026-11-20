@@ -98,13 +98,13 @@ export function Portfolio() {
         >
           <span className="text-cyan-400 uppercase tracking-wider text-sm font-medium">Portfólio</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-            Projetos{" "}
+            Projetos reais{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
               que geram resultados
             </span>
           </h2>
           <p className="text-xl text-cyan-200 max-w-2xl mx-auto">
-            Confira projetos de clientes e conheça também nosso produto próprio
+            Confira projetos reais de clientes e conheça também meu produto próprio
           </p>
         </motion.div>
 
@@ -179,7 +179,7 @@ export function Portfolio() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-slate-900 rounded-3xl max-w-2xl w-full border border-cyan-500/30 overflow-hidden"
+            className="bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[calc(100vh-2rem)] overflow-y-auto overscroll-contain border border-cyan-500/30"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="aspect-video relative">

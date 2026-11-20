@@ -39,7 +39,7 @@ export function FeaturedCase() {
             ⭐ Case de Sucesso
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Como ajudamos a{" "}
+            Como ajudei a{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
               Genesis Mobilidade
             </span>
@@ -65,7 +65,7 @@ export function FeaturedCase() {
 
               <h3 className="text-2xl font-bold text-white mb-4 mt-8">🧠 Estratégia</h3>
               <p className="text-cyan-200 mb-6">
-                Estruturamos uma estratégia integrada com gestão completa de Social Media, produção de vídeos (Videomaker),
+                Estruturei uma estratégia integrada com gestão completa de Social Media, produção de vídeos (Videomaker),
                 copywriting focado em vendas e gestão de tráfego orientada a resultados para atrair e converter compradores.
               </p>
 
@@ -116,8 +116,8 @@ export function FeaturedCase() {
                 ))}
               </div>
               <p className="mt-6 border-t border-green-500/20 pt-4 text-sm text-cyan-200">
-                A parceria foi encerrada por uma decisão comercial relacionada à nossa atuação com outras empresas do mesmo segmento.
-                Atualmente, não conduzimos o marketing da Gênesis; os resultados apresentados correspondem ao período em que trabalhamos juntos.
+                A parceria foi encerrada por uma decisão comercial relacionada à minha atuação com outras empresas do mesmo segmento.
+                Atualmente, não conduzo o marketing da Gênesis; os resultados apresentados correspondem ao período em que trabalhei com a empresa.
               </p>
             </div>
           </motion.div>

@@ -62,7 +62,7 @@ export function Testimonials() {
         >
           <span className="text-cyan-400 uppercase tracking-wider text-sm font-medium">Depoimentos</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-            O que nossos{" "}
+            O que meus{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
               clientes dizem
             </span>

@@ -32,7 +32,7 @@ export function CTA() {
               </h2>
 
               <p className="text-xl text-cyan-200 mb-10 max-w-2xl mx-auto">
-                Vamos conversar sobre seu projeto e criar uma solução digital que vai transformar
+                Fale comigo sobre seu projeto. Vou criar uma solução digital para transformar
                 visitantes em clientes e impulsionar seu negócio.
               </p>
 
