@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Code2, Rocket, Share2, TrendingUp, Bot, Video } from "lucide-react";
+import avFlowCrmLogo from "../../imports/av_flow_crm_logo.png";
 
 export function Services() {
   const services = [
@@ -85,8 +86,16 @@ export function Services() {
                    style={{ background: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
 
               <div className="relative bg-slate-950/50 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-500/40 transition-all duration-300">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${
+                  service.title === "AV Flow CRM"
+                    ? "overflow-hidden bg-slate-950"
+                    : `bg-gradient-to-br ${service.color}`
+                }`}>
+                  {service.title === "AV Flow CRM" ? (
+                    <img src={avFlowCrmLogo} alt="" className="w-full h-full object-contain" />
+                  ) : (
+                    <service.icon className="w-8 h-8 text-white" />
+                  )}
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>

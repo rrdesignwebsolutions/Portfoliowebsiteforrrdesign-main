@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Code, Video, TrendingUp, Bot } from "lucide-react";
+import avFlowCrmLogo from "../../imports/av_flow_crm_logo.png";
 
 export function About() {
   const expertise = [
@@ -50,8 +51,16 @@ export function About() {
                    style={{ background: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
 
               <div className="relative bg-slate-900/80 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <item.icon className="w-7 h-7 text-white" />
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                  item.title === "AV Flow CRM"
+                    ? "overflow-hidden bg-slate-950"
+                    : `bg-gradient-to-br ${item.color}`
+                }`}>
+                  {item.title === "AV Flow CRM" ? (
+                    <img src={avFlowCrmLogo} alt="" className="w-full h-full object-contain" />
+                  ) : (
+                    <item.icon className="w-7 h-7 text-white" />
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
                 <div className={`h-1 w-0 group-hover:w-full bg-gradient-to-r ${item.color} transition-all duration-300 rounded-full`} />

@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { Logo } from "./Logo";
+import avFlowCrmLogo from "../../imports/av_flow_crm_logo.png";
 
 export function Footer() {
   return (
@@ -18,7 +19,10 @@ export function Footer() {
             <ul className="space-y-2 text-cyan-200 text-sm">
               <li>Desenvolvimento Web</li>
               <li>Landing Pages</li>
-              <li>AV Flow CRM</li>
+              <li className="flex items-center gap-2">
+                <img src={avFlowCrmLogo} alt="" className="w-5 h-5 rounded object-contain" />
+                <span>AV Flow CRM</span>
+              </li>
               <li>Social Media</li>
               <li>Vídeomaker</li>
               <li>Gestão de Tráfego</li>

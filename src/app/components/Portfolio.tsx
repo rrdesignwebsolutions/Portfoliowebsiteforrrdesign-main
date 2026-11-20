@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ExternalLink, Eye } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import avFlowCrmPreview from "../../imports/av_flow_crm_preview.svg";
+import avFlowCrmLogo from "../../imports/av_flow_crm_logo.png";
 import fotoGenesis from "../../imports/foto_genesis.jpeg";
 import fotoDuaal from "../../imports/foto_duaal.png";
 import fotoEliana from "../../imports/foto_eliana.png";
@@ -31,7 +31,7 @@ export function Portfolio() {
       description: "CRM próprio para centralizar a gestão de leads, automatizar o atendimento com IA e acompanhar cada oportunidade em um só lugar.",
       result: "Plataforma própria de CRM, atendimento automatizado por IA e gestão completa dos leads ao longo da jornada comercial.",
       link: "https://avflowcrm.com.br/",
-      image: avFlowCrmPreview,
+      image: avFlowCrmLogo,
       featured: true,
     },
     {
@@ -128,9 +128,13 @@ export function Portfolio() {
                   <ImageWithFallback
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className={`w-full h-full transform group-hover:scale-110 transition-transform duration-500 ${
+                      project.featured ? "object-contain bg-slate-950 p-6" : "object-cover"
+                    }`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                  {!project.featured && (
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                  )}
 
                   {project.featured && (
                     <span className="absolute top-4 left-4 z-10 rounded-full border border-green-300/30 bg-slate-950/85 px-3 py-1 text-xs font-medium text-green-200">
@@ -186,7 +190,9 @@ export function Portfolio() {
               <ImageWithFallback
                 src={selectedProject.image}
                 alt={selectedProject.name}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${
+                  selectedProject.featured ? "object-contain bg-slate-950 p-8" : "object-cover"
+                }`}
               />
             </div>
 
