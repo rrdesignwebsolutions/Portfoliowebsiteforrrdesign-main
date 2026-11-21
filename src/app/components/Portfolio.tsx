@@ -80,7 +80,7 @@ export function Portfolio() {
       type: "Identidade Visual + Design de Embalagens",
       description: "Desenvolvimento completo de marca para lançamento.",
       result: "Marca estruturada e embalagens prontas para produção.",
-      link: "https://www.duaal.com.br/",
+      link: "https://duaal.com.br/",
       image: fotoDuaal,
     },
   ];
