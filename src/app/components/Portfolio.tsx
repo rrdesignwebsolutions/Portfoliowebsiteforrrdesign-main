@@ -15,7 +15,7 @@ interface Project {
   type: string;
   description: string;
   result: string;
-  link: string;
+  link?: string;
   instagramLink?: string;
   image: string;
   featured?: boolean;
@@ -61,7 +61,6 @@ export function Portfolio() {
       type: "Social Media + Videomaker + Copywriting + Tráfego pago",
       description: "Estratégia integrada de conteúdo e marketing digital para impulsionar as vendas de motos e apoiar a expansão da Gênesis.",
       result: "De 5 para 38 motos vendidas por mês em seis meses, crescimento de 660%, com expansão para uma nova unidade em outra cidade.",
-      link: "https://genesismobilidade.shop/",
       instagramLink: "https://www.instagram.com/genesis.mobilidade/",
       image: fotoGenesis,
     },
@@ -213,15 +212,17 @@ export function Portfolio() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={selectedProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
-                >
-                  Acessar projeto
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                {selectedProject.link && (
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+                  >
+                    Acessar projeto
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
                 {selectedProject.instagramLink && (
                   <a
                     href={selectedProject.instagramLink}
