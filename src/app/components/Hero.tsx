@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 
@@ -80,9 +80,8 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 backdrop-blur-sm mb-8"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 backdrop-blur-sm mb-8"
           >
-            <Sparkles className="w-4 h-4 text-cyan-300" />
             <span className="text-cyan-200 text-sm">Ruan Ramos Digital</span>
           </motion.div>
 

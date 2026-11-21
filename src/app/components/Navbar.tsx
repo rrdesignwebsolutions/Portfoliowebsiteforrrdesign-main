@@ -38,7 +38,10 @@ export function Navbar() {
         isScrolled ? "backdrop-blur-xl border-b border-cyan-500/20" : ""
       }`}
     >
-      <div className="container mx-auto px-4">
+      {isOpen && (
+        <div aria-hidden="true" className="absolute inset-0 bg-slate-950 md:hidden" />
+      )}
+      <div className="relative container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <motion.a
             href="#"
@@ -78,7 +81,11 @@ export function Navbar() {
           </div>
 
           <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
             className="md:hidden text-white p-2"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -87,6 +94,7 @@ export function Navbar() {
 
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
